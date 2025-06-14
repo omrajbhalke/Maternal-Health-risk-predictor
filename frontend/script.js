@@ -17,9 +17,9 @@ function predict() {
     }
 
     if (
-        !isValidNumber(age, 12, 80) ||
-        !isValidNumber(diastolic, 40, 120) ||
-        !isValidNumber(bs, 1, 20) ||
+        !isValidNumber(age, 15, 80) ||
+        !isValidNumber(diastolic, 40, 115) ||
+        !isValidNumber(bs, 3.3, 11.1) ||
         !isValidNumber(temp, 95, 105) ||
         !isValidNumber(pulse, 40, 180)
     ) {
