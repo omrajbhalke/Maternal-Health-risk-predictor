@@ -64,6 +64,22 @@ pipeline {
         }
     }
 }
+stage('Run Docker Container') {
+            steps {
+                script {
+                    // Stop and remove existing container if it exists
+                    bat 'docker rm -f maternal_health_container || exit 0'
+
+                    // Run the container with MongoDB connection
+                    bat 'docker run -d --name maternal_health_container -p 5000:5000 -e MONGO_URL=mongodb://host.docker.internal:27017 omrajbhalke/maternal_health:latest'
+                }
+            }
+        }
+stage('Verify Trivy Installed') {
+    steps {
+        bat 'trivy --version'
+    }
+}
 
 
     }
