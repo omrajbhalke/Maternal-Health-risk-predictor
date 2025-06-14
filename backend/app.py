@@ -8,7 +8,7 @@
 
 # # net start MongoDB
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import joblib
 from pymongo import MongoClient
@@ -93,6 +93,16 @@ def get_patients():
     except Exception as e:
         print("Error fetching patients:", e)
         return jsonify({"error": "Failed to fetch patient data"}), 500
+    
+# Serve frontend
+@app.route('/')
+def serve_index():
+    return send_from_directory('../frontend', 'index.html')
+
+@app.route('/<path:path>')
+def serve_static(path):
+    return send_from_directory('../frontend', path)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
