@@ -29,7 +29,9 @@ encoder = joblib.load(os.path.join(BASE_DIR, "label_encoder.pkl"))
 scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
 
 # Connect to MongoDB
-client = MongoClient("mongodb://localhost:27017/")
+# client = MongoClient("mongodb://localhost:27017/")
+MONGO_URL = os.getenv("MONGO_URL", "mongodb://localhost:27017/")
+client = MongoClient(MONGO_URL)
 db = client["health_db"]
 collection = db["patients"]
 
