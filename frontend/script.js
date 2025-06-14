@@ -4,6 +4,12 @@ const isValidNumber = (val, min, max) => {
 };
 
 function predict() {
+    const predictButton = document.getElementById("predictButton");
+
+    // ✅ Disable button immediately
+    predictButton.disabled = true;
+    predictButton.innerText = "Predicting...";
+
     const name = document.getElementById("name").value;
     const age = document.getElementById("age").value;
     const diastolic = document.getElementById("diastolic").value;
@@ -43,12 +49,26 @@ function predict() {
         },
         body: JSON.stringify(data)
     })
-    .then(res => res.json())
-    .then(result => {
-        document.getElementById("result").innerText = "Predicted Risk: " + result.risk;
-    })
-    .catch(err => {
-        console.error(err);
-        alert("Prediction failed. Check backend console.");
-    });
+        .then(res => res.json())
+        .then(result => {
+            document.getElementById("result").innerText = "Predicted Risk: " + result.risk;
+
+            // ✅ Clear form fields
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("diastolic").value = "";
+            document.getElementById("bs").value = "";
+            document.getElementById("temp").value = "";
+            document.getElementById("pulse").value = "";
+
+            // ✅ Re-enable button
+            predictButton.disabled = false;
+            predictButton.innerText = "Predict";
+        })
+        .catch(err => {
+            console.error(err);
+            alert("Prediction failed. Check backend console.");
+            predictButton.disabled = false;
+            predictButton.innerText = "Predict";
+        });
 }
