@@ -30,7 +30,7 @@ scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
 
 # Connect to MongoDB
 # client = MongoClient("mongodb://localhost:27017/")
-MONGO_URL = os.getenv("MONGO_URL", "mongodb://localhost:27017/")
+MONGO_URL = os.getenv("MONGO_URL", "mongodb+srv://omrajbhalke245:WNiMu7rjpGWZxp7Q@m0.pinfoio.mongodb.net/?retryWrites=true&w=majority&appName=M0")
 client = MongoClient(MONGO_URL)
 db = client["health_db"]
 collection = db["patients"]
@@ -97,16 +97,18 @@ def get_patients():
         return jsonify({"error": "Failed to fetch patient data"}), 500
     
 # Serve frontend
+FRONTEND_DIR = os.path.join(os.path.dirname(__file__), '..', 'frontend')
+
 @app.route('/')
 def serve_index():
-    return send_from_directory('../frontend', 'index.html')
+    return send_from_directory(FRONTEND_DIR, 'index.html')
 
 @app.route('/<path:path>')
 def serve_static(path):
-    return send_from_directory('../frontend', path)
-
+    return send_from_directory(FRONTEND_DIR, path)
 
 if __name__ == "__main__":
     # app.run(debug=True)
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000)
+    # app.run(host='0.0.0.0', port=5000, debug=True)
 
