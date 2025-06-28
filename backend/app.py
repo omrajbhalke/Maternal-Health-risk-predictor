@@ -30,7 +30,12 @@ scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
 
 # Connect to MongoDB
 # client = MongoClient("mongodb://localhost:27017/")
-MONGO_URL = os.getenv("MONGO_URL", "mongodb+srv://omrajbhalke245:WNiMu7rjpGWZxp7Q@m0.pinfoio.mongodb.net/?retryWrites=true&w=majority&appName=M0")
+from dotenv import load_dotenv
+
+load_dotenv()  # Load variables from .env
+
+MONGO_URL = os.getenv("MONGO_URL")
+
 client = MongoClient(MONGO_URL)
 db = client["health_db"]
 collection = db["patients"]
