@@ -1,0 +1,13 @@
+# Ignore environment and sensitive files
+.env
+*.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code settings (optional)
+.vscode/
+
+# MacOS and system files
+.DS_Store
