@@ -19,6 +19,8 @@ function predict() {
 
     if (!name || !age || !diastolic || !bs || !temp || !pulse) {
         alert("Please fill all fields");
+        predictButton.disabled = false;
+        predictButton.innerText = "Predict";
         return;
     }
 
@@ -51,8 +53,13 @@ function predict() {
     })
         .then(res => res.json())
         .then(result => {
-            document.getElementById("result").innerText = "Predicted Risk: " + result.risk;
-
+            if (result.risk) {
+                document.getElementById("result").innerText = "✅ Predicted Risk: " + result.risk;
+            } else if (result.error) {
+                document.getElementById("result").innerText = "⚠️ Error: " + result.error;
+            } else {
+                document.getElementById("result").innerText = "⚠️ Unknown error occurred.";
+            }
             // ✅ Clear form fields
             document.getElementById("name").value = "";
             document.getElementById("age").value = "";

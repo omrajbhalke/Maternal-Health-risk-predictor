@@ -42,26 +42,26 @@ collection = db["patients"]
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    data = request.get_json(force=True)  # <--- force=True makes it try harder to parse
-    if not data:
-        return jsonify({"error": "No data provided"}), 400
-
     try:
-        # Extract input features
+        data = request.get_json(force=True)
+        if not data:
+            return jsonify({"error": "No data provided"}), 400
+
+        # Extract fields
         name = data["name"]
-        age = data["age"]
-        diastolic = data["diastolic"]
-        bs = data["bs"]
-        temp = data["temp"]
-        pulse = data["pulse"]
+        age = float(data["age"])
+        diastolic = float(data["diastolic"])
+        bs = float(data["bs"])
+        temp = float(data["temp"])
+        pulse = float(data["pulse"])
 
         # Preprocess and predict
         input_data = [age, diastolic, bs, temp, pulse]
         input_scaled = scaler.transform([input_data])
-        prediction = model.predict(input_scaled)  # Output: [0] or [1]
-        risk_label = encoder.inverse_transform(prediction)[0]  # 'Healthy' or 'Risky'
+        prediction = model.predict(input_scaled)
+        risk_label = encoder.inverse_transform(prediction)[0]
 
-        # Store result in MongoDB
+        # Store in MongoDB
         collection.insert_one({
             "name": name,
             "age": age,
@@ -74,10 +74,11 @@ def predict():
         })
 
         return jsonify({"risk": risk_label})
-
+    
     except Exception as e:
-        print("Prediction error:", e)
-        return jsonify({"error": "Prediction failed"}), 400
+        print("🔥 Prediction error:", repr(e))  # <--- Add this line
+        return jsonify({"error": f"Prediction failed: {str(e)}"}), 400
+
 
 @app.route('/patients', methods=['GET'])
 def get_patients():
