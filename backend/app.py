@@ -11,6 +11,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import joblib
+import certifi
 from pymongo import MongoClient
 from datetime import datetime
 import os
@@ -30,13 +31,13 @@ scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
 
 # Connect to MongoDB
 # client = MongoClient("mongodb://localhost:27017/")
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()  # Load variables from .env
+# load_dotenv()  # Load variables from .env
 
-MONGO_URL = os.getenv("MONGO_URL")
+# MONGO_URL = os.getenv("MONGO_URL")
+MONGO_URL= "mongodb+srv://maternal2:Uu61Fk1L88ONcoUM@m0.pinfoio.mongodb.net/health_db?retryWrites=true&w=majority&tls=true&appName=M0"
 
-import certifi
 client = MongoClient(MONGO_URL, tlsCAFile=certifi.where())
 
 db = client["health_db"]
