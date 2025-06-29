@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maternal Health Risk Prediction</title>
     <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
@@ -63,6 +64,41 @@
         .cta-button:hover {
             background-color: #219150;
         }
+
+        @media (max-width: 768px) {
+            .banner {
+                height: auto;
+                padding: 1.5rem 1rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .banner h1 {
+                font-size: 1.8rem;
+                padding: 0.8rem 1.2rem;
+            }
+
+            .intro-section {
+                padding: 1.5rem 1rem;
+                margin: 1rem;
+            }
+
+            .intro-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .intro-section p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            .cta-button {
+                font-size: 0.95rem;
+                padding: 0.7rem 1.2rem;
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -85,13 +121,18 @@
     <section class="intro-section">
         <h2>About the Project</h2>
         <p>
-            Maternal health is a vital concern, and early risk detection can make a life-saving difference. Our project uses machine learning to determine whether a pregnant individual is Healthy or Risky based on key maternal health indicators.
+            Maternal health is a vital concern, and early risk detection can make a life-saving difference. Our project
+            uses machine learning to determine whether a pregnant individual is Healthy or Risky based on key maternal
+            health indicators.
         </p>
         <p>
-            By analyzing factors such as age, blood pressure, blood sugar level, body temperature, and heart rate, our model delivers fast and accurate predictions. This helps healthcare providers and expecting mothers make timely, informed decisions.
+            By analyzing factors such as age, blood pressure, blood sugar level, body temperature, and heart rate, our
+            model delivers fast and accurate predictions. This helps healthcare providers and expecting mothers make
+            timely, informed decisions.
         </p>
         <p>
-            Our goal is to enhance prenatal care through AI, enabling proactive monitoring and promoting safer pregnancies with clear, data-driven health insights.
+            Our goal is to enhance prenatal care through AI, enabling proactive monitoring and promoting safer
+            pregnancies with clear, data-driven health insights.
         </p>
         <a href="predict.html" class="cta-button">Start Risk Prediction</a>
 

@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maternal Health Risk Predictor</title>
     <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
@@ -26,11 +27,11 @@
         <h1>Predict Patient Health Risk</h1>
         <div class="form-box">
             <input type="text" id="name" placeholder="Name">
-            <input type="number" id="age" placeholder="Age">
-            <input type="number" id="diastolic" placeholder="Diastolic BP">
-            <input type="number" id="bs" placeholder="Blood Sugar">
-            <input type="number" id="temp" placeholder="Body Temperature">
-            <input type="number" id="pulse" placeholder="Heart Rate">
+            <input type="number" id="age" placeholder="Age (15-80 years)">
+            <input type="number" id="diastolic" placeholder="Diastolic BP (40-115 mmHg)">
+            <input type="number" id="bs" placeholder="Blood Sugar (3.3-11.1 mmol/L)">
+            <input type="number" id="temp" placeholder="Body Temperature (95-105 °F)">
+            <input type="number" id="pulse" placeholder="Heart Rate (40-180 bpm)">
             <button id="predictButton" onclick="predict()">Predict</button>
         </div>
 

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const stats = {
         "Low Risk / Healthy": {
-            Age: [12.00, 70.00, 26.61],
+            Age: [15.00, 70.00, 26.61],
             SystolicBP: [70.00, 130.00, 107.99],
             DiastolicBP: [49.00, 100.00, 73.16],
             BS: [6.00, 11.00, 7.12],
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             HeartRate: [60.00, 88.00, 72.98]
         },
         "High Risk / Risky": {
-            Age: [12.00, 65.00, 35.33],
+            Age: [15.00, 65.00, 35.33],
             SystolicBP: [83.00, 160.00, 121.88],
             DiastolicBP: [60.00, 100.00, 81.97],
             BS: [6.00, 19.00, 11.40],

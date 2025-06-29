@@ -251,3 +251,483 @@ footer {
         height: auto;
     }
 }
+
+/* Health Report Container */
+.health-report {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border: 1px solid #e8e8e8;
+}
+
+.health-report h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+
+.health-report h4 {
+    color: #34495e;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 20px 0 15px 0;
+    border-left: 4px solid #27ae60;
+    padding-left: 15px;
+}
+
+/* Patient Info Section */
+.patient-info {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    border-left: 4px solid #3498db;
+}
+
+.patient-info strong {
+    color: #2c3e50;
+}
+
+/* Risk Assessment Section */
+.risk-assessment {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.risk-assessment strong {
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.risk-high {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(231, 76, 60, 0.3);
+}
+
+.risk-low {
+    background-color: #27ae60;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(39, 174, 96, 0.3);
+}
+
+/* Measurements Section */
+.measurements {
+    margin: 25px 0;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.report-table thead {
+    background-color: #34495e;
+    color: white;
+}
+
+.report-table th {
+    padding: 12px 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    border: none;
+}
+
+.report-table td {
+    padding: 12px 10px;
+    text-align: center;
+    border-bottom: 1px solid #ecf0f1;
+    font-size: 0.9rem;
+}
+
+.report-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.report-table tbody tr:hover {
+    background-color: #e8f4fd;
+    transition: background-color 0.2s ease;
+}
+
+/* Parameter Status Indicators */
+.status-normal {
+    background-color: #27ae60;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+    min-width: 50px;
+}
+
+.status-low {
+    background-color: #f39c12;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+    min-width: 50px;
+}
+
+.status-high {
+    background-color: #e74c3c;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+    min-width: 50px;
+}
+
+/* Recommendations Section */
+.recommendations {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid #3498db;
+}
+
+.recommendation {
+    background-color: white;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border-left: 3px solid #27ae60;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation:first-child {
+    margin-top: 0;
+}
+
+.recommendation:last-child {
+    margin-bottom: 0;
+}
+
+.recommendation strong {
+    color: #e74c3c;
+}
+
+/* Report Footer */
+.report-footer {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 25px;
+    text-align: center;
+    border: 1px dashed #bdc3c7;
+}
+
+.report-footer small {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+/* Error Message Styling */
+.error-message {
+    background-color: #ffe6e6;
+    color: #d63031;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #fab1a0;
+    margin: 15px 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.error-message h3 {
+    color: #d63031;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.error-message p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.error-message code {
+    background-color: #fff5f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #d63031;
+}
+
+/* Button Disabled State */
+.form-box button:disabled,
+.container2 button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.form-box button:disabled:hover,
+.container2 button:disabled:hover {
+    background-color: #95a5a6;
+}
+
+/* Success Message Styling */
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #c3e6cb;
+    margin: 15px 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #27ae60;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Report Action Buttons */
+.report-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    min-width: 120px;
+}
+
+.download-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.download-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.print-btn {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.print-btn:hover {
+    background-color: #7f8c8d;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(149, 165, 166, 0.3);
+}
+
+.email-btn {
+    background-color: #e67e22;
+    color: white;
+}
+
+.email-btn:hover {
+    background-color: #d35400;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(230, 126, 34, 0.3);
+}
+
+/* Download PDF Button (individual) */
+.download-pdf-btn {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download-pdf-btn:hover {
+    background-color: #219a52;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
+}
+
+/* Enhanced Report Footer */
+.report-footer p {
+    margin: 10px 0;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Mobile Responsiveness for Action Buttons */
+@media (max-width: 768px) {
+    .report-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .action-btn {
+        width: 100%;
+        max-width: 200px;
+        margin: 5px 0;
+    }
+    
+    .download-pdf-btn {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Print Styles - Hide Action Buttons */
+@media print {
+    .report-actions,
+    .download-pdf-btn {
+        display: none !important;
+    }
+}
+@media (max-width: 768px) {
+    .health-report {
+        padding: 15px;
+        margin: 15px;
+    }
+    
+    .health-report h3 {
+        font-size: 1.3rem;
+    }
+    
+    .health-report h4 {
+        font-size: 1.1rem;
+    }
+    
+    .report-table {
+        font-size: 0.8rem;
+    }
+    
+    .report-table th,
+    .report-table td {
+        padding: 8px 5px;
+    }
+    
+    .patient-info,
+    .risk-assessment,
+    .recommendations {
+        padding: 12px;
+    }
+    
+    .recommendation {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .status-normal,
+    .status-low,
+    .status-high {
+        font-size: 0.75rem;
+        padding: 3px 6px;
+        min-width: 40px;
+    }
+    
+    .risk-high,
+    .risk-low {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+/* Print Styles for Health Reports */
+@media print {
+    .health-report {
+        box-shadow: none;
+        border: 1px solid #000;
+        page-break-inside: avoid;
+    }
+    
+    .risk-high,
+    .risk-low {
+        background-color: transparent !important;
+        border: 2px solid #000;
+        color: #000 !important;
+    }
+    
+    .status-normal,
+    .status-low,
+    .status-high {
+        background-color: transparent !important;
+        border: 1px solid #000;
+        color: #000 !important;
+    }
+    
+    .report-table {
+        box-shadow: none;
+    }
+    
+    .navbar,
+    footer {
+        display: none;
+    }
+}
