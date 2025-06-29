@@ -11,12 +11,12 @@ COPY backend/ backend/
 COPY frontend/ frontend/
 
 # Expose Flask port
-EXPOSE 5000
+EXPOSE 10000
 
 # Set environment variables
 ENV FLASK_APP=backend/app.py
-ENV FLASK_RUN_PORT=5000
+ENV FLASK_RUN_PORT=10000
 ENV FLASK_ENV=production
 
 # Use Gunicorn as production server
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "backend.app:app"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:10000", "backend.app:app"]
