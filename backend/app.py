@@ -36,12 +36,27 @@ scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
 # load_dotenv()  # Load variables from .env
 
 # MONGO_URL = os.getenv("MONGO_URL")
-MONGO_URL= "mongodb+srv://maternal2:Uu61Fk1L88ONcoUM@m0.pinfoio.mongodb.net/health_db?retryWrites=true&w=majority&tls=true&appName=M0"
+# MONGO_URL= "mongodb+srv://maternal2:Uu61Fk1L88ONcoUM@m0.pinfoio.mongodb.net/health_db?retryWrites=true&w=majority&tls=true&appName=M0"
 
-client = MongoClient(MONGO_URL, tlsCAFile=certifi.where())
+# client = MongoClient(MONGO_URL, tlsCAFile=certifi.where())
 
-db = client["health_db"]
-collection = db["patients"]
+
+from pymongo.mongo_client import MongoClient
+
+uri = "mongodb+srv://maternal2:Uu61Fk1L88ONcoUM@m0.pinfoio.mongodb.net/?retryWrites=true&w=majority&appName=M0"
+
+# Create a new client and connect to the server
+client = MongoClient(uri)
+
+# Send a ping to confirm a successful connection
+try:
+    client.admin.command('ping')
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
+
+# db = client["health_db"]
+# collection = db["patients"]
 
 @app.route('/predict', methods=['POST'])
 def predict():
