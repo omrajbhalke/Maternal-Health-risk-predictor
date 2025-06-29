@@ -34,10 +34,17 @@ scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
 
 
 MONGO_URI = os.getenv("MONGO_URI")
-client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+# client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+# db = client["health_db"]
+# collection = db["patients"]
+try:
+    client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+    db = client["health_db"]
+    collection = db["patients"]
+    print("✅ Connected to MongoDB Atlas")
+except Exception as conn_err:
+    print("❌ MongoDB connection failed:", conn_err)
 
-db = client["health_db"]
-collection = db["patients"]
 
 @app.route('/predict', methods=['POST'])
 def predict():
