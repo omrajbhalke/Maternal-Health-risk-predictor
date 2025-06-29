@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("http://maternal-health.onrender.com/patients")
+    fetch("http://maternal-health-qq5f.onrender.com/patients")
         .then(res => res.json())
         .then(data => {
             console.log("Data from backend:", data);  // Debug log

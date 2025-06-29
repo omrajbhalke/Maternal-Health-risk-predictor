@@ -42,7 +42,7 @@ function predict() {
         pulse: parseFloat(pulse)
     };
 
-    fetch("http://maternal-health.onrender.com/predict", {
+    fetch("http://maternal-health-qq5f.onrender.com/predict", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
