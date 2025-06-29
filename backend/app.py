@@ -42,7 +42,9 @@ collection = db["patients"]
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    data = request.get_json()
+    data = request.get_json(force=True)  # <--- force=True makes it try harder to parse
+    if not data:
+        return jsonify({"error": "No data provided"}), 400
 
     try:
         # Extract input features
