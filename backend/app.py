@@ -36,7 +36,9 @@ load_dotenv()  # Load variables from .env
 
 MONGO_URL = os.getenv("MONGO_URL")
 
-client = MongoClient(MONGO_URL)
+import certifi
+client = MongoClient(MONGO_URL, tlsCAFile=certifi.where())
+
 db = client["health_db"]
 collection = db["patients"]
 
