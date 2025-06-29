@@ -102,7 +102,9 @@ def get_patients():
         return jsonify({"error": "Failed to fetch patient data"}), 500
     
 # Serve frontend
-FRONTEND_DIR = os.path.join(os.path.dirname(__file__), '..', 'frontend')
+# FRONTEND_DIR = os.path.join(os.path.dirname(__file__), '..', 'frontend')
+FRONTEND_DIR = os.path.join(os.path.dirname(__file__), 'frontend')
+
 
 @app.route('/')
 def serve_index():
