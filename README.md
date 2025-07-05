@@ -507,8 +507,7 @@ SOFTWARE.
 
 ## 📞 Contact & Support
 
-- **GitHub Issues**: [Report bugs or request features](https://github.com/your-username/MATERNAL-HEALTH-RISK-PREDICTOR/issues)
-- **Email**: your-email@example.com
+- **Email**: omrajbhalke245@gmail.com
 - **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/omraj-bhalke-94408a259/)
 
 ### Support the Project
