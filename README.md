@@ -509,7 +509,7 @@ SOFTWARE.
 ## 📞 Contact & Support
 
 - **Email**: omrajbhalke245@gmail.com
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/omraj-bhalke-94408a259/)
+- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/omraj-bhalke-94408a259/)
 
 ### Support the Project
 If you find this project helpful, please consider:
