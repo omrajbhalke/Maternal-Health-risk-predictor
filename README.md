@@ -7,7 +7,7 @@
 ![Docker](https://img.shields.io/badge/docker-ready-blue.svg)
 
 A full-stack machine learning web application that predicts **maternal health risk levels** as either **Healthy (Low Risk)** or **Risky (High Risk)** based on vital signs including age, blood pressure, blood sugar, body temperature, and heart rate.
-- **Live Demo**: [Maternal Health Risk Predictor](maternal-health-qq5f.onrender.com)
+- **Live Demo**: [Maternal Health Risk Predictor](https://maternal-health-qq5f.onrender.com/)
 
 ## 🔍 Overview
 
